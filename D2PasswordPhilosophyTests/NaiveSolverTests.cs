@@ -6,14 +6,14 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace PasswordPhilosophy.Tests
 {
     [TestClass]
-    public class ProgramTests
+    public class NaiveSolverTests
     {
         [TestMethod]
         public void CheckMinMaxTest()
         {
             var strings = File.ReadLines(Program.InputTxt).ToList();
 
-            Program.CheckMinMax(strings).Should().Be(454);
+            new NaiveSolver(strings).CheckMinMax().Should().Be(454);
         }
 
         [TestMethod]
@@ -21,7 +21,7 @@ namespace PasswordPhilosophy.Tests
         {
             var strings = File.ReadLines(Program.InputTxt).ToList();
 
-            Program.CheckPosition(strings).Should().Be(649);
+            new NaiveSolver(strings).CheckPosition().Should().Be(649);
         }
     }
 }
