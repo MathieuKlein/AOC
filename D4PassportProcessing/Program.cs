@@ -12,7 +12,7 @@ namespace D4PassportProcessing
         public static void Main(string[] args)
         {
             var strings = File.ReadLines(InputTxt);
-            var passeports = GetPasseports(strings);
+            var passeports = GetPasseports(strings).ToList();
 
             var validPasseports = passeports.Count(x => x.ContainsRequiredFields());
             Console.WriteLine(validPasseports);
@@ -21,25 +21,22 @@ namespace D4PassportProcessing
             Console.ReadKey();
         }
 
-        public static List<Passeport> GetPasseports(IEnumerable<string> strings)
+        public static IEnumerable<Passeport> GetPasseports(IEnumerable<string> strings)
         {
-            var passeports = new List<Passeport>();
-
-            var passeport = new Passeport();
-            passeports.Add(passeport);
+            var linesOfPasseport = new List<string>();
 
             foreach (var s in strings)
                 if (s.Length == 0)
                 {
-                    passeport = new Passeport();
-                    passeports.Add(passeport);
+                    yield return new Passeport(linesOfPasseport);
+                    linesOfPasseport.Clear();
                 }
                 else
                 {
-                    passeport.AddLine(s);
+                    linesOfPasseport.Add(s);
                 }
 
-            return passeports;
+            yield return new Passeport(linesOfPasseport);
         }
     }
 }

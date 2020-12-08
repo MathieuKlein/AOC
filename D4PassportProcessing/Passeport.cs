@@ -1,23 +1,66 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
 
 namespace D4PassportProcessing
 {
     public class Passeport
     {
-        private const string Byr = "byr";
-        private const string Iyr = "iyr";
-        private const string Eyr = "eyr";
-        private const string Hgt = "hgt";
-        private const string Hcl = "hcl";
-        private const string Ecl = "ecl";
-        private const string Pid = "pid";
-        private const string Cm = "cm";
-        private const string In = "in";
-        private readonly string[] _acceptedEyeColors = { "amb", "blu", "brn", "gry", "grn", "hzl", "oth" };
+        private const string LabelByr = "byr";
+        private const string LabelIyr = "iyr";
+        private const string LabelEyr = "eyr";
+        private const string LabelHgt = "hgt";
+        private const string LabelHcl = "hcl";
+        private const string LabelEcl = "ecl";
+        private const string LabelPid = "pid";
+        private static readonly string[] RequiredFields = { LabelByr, LabelIyr, LabelEyr, LabelHgt, LabelHcl, LabelEcl, LabelPid };
+        private static readonly CustomerValidator CustomerValidator;
+
         private readonly IDictionary<string, string> _fieldDict = new Dictionary<string, string>();
-        private readonly string[] _requiredFields = { Byr, Iyr, Eyr, Hgt, Hcl, Ecl, Pid };
+
+        public static readonly string[] AcceptedEyeColors = { "amb", "blu", "brn", "gry", "grn", "hzl", "oth" };
+
+        static Passeport()
+        {
+            CustomerValidator = new CustomerValidator();
+        }
+
+        public Passeport(IEnumerable<string> linesOfPasseport)
+        {
+            foreach (var lineOfPasseport in linesOfPasseport)
+                AddLine(lineOfPasseport);
+
+
+            if (_fieldDict.ContainsKey(LabelByr)) Byr = int.Parse(_fieldDict[LabelByr]);
+            if (_fieldDict.ContainsKey(LabelIyr)) IyrValue = int.Parse(_fieldDict[LabelIyr]);
+            if (_fieldDict.ContainsKey(LabelEyr)) EyrValue = int.Parse(_fieldDict[LabelEyr]);
+            if (_fieldDict.ContainsKey(LabelHgt)) HgtUnit = _fieldDict[LabelHgt].Substring(_fieldDict[LabelHgt].Length - 2);
+            if (_fieldDict.ContainsKey(LabelHcl)) Hcl = _fieldDict[LabelHcl];
+            if (_fieldDict.ContainsKey(LabelEcl)) Ecl = _fieldDict[LabelEcl];
+            if (_fieldDict.ContainsKey(LabelPid)) Pid = _fieldDict[LabelPid];
+
+            if (_fieldDict.ContainsKey(LabelHgt))
+            {
+                var substring = _fieldDict[LabelHgt].Substring(0, _fieldDict[LabelHgt].Length - 2);
+                if (!string.IsNullOrWhiteSpace(substring))
+                    HgtValue = int.Parse(substring);
+            }
+        }
+
+        public int Byr { get; }
+
+        public string? Ecl { get; }
+
+        public string? Hcl { get; }
+
+        public int HgtValue { get; }
+
+        public string? HgtUnit { get; }
+
+        public int EyrValue { get; }
+
+        public int IyrValue { get; }
+
+        public string? Pid { get; }
 
         public void AddLine(string s)
         {
@@ -31,53 +74,12 @@ namespace D4PassportProcessing
 
         public bool ContainsRequiredFields()
         {
-            return _requiredFields.All(requiredField => _fieldDict.Keys.Contains(requiredField));
+            return RequiredFields.All(requiredField => _fieldDict.Keys.Contains(requiredField));
         }
 
         public bool IsValid()
         {
-            if (!ContainsRequiredFields())
-                return false;
-
-            var byrValue = int.Parse(_fieldDict[Byr]);
-            if (byrValue < 1920 || byrValue > 2002)
-                return false;
-
-            var iyrValue = int.Parse(_fieldDict[Iyr]);
-            if (iyrValue < 2010 || iyrValue > 2020)
-                return false;
-
-            var eyrValue = int.Parse(_fieldDict[Eyr]);
-            if (eyrValue < 2020 || eyrValue > 2030)
-                return false;
-
-            var substring = _fieldDict[Hgt].Substring(0, _fieldDict[Hgt].Length - 2);
-            if (string.IsNullOrWhiteSpace(substring))
-                return false;
-
-            var hgtUnit = _fieldDict[Hgt].Substring(_fieldDict[Hgt].Length - 2);
-
-            if (hgtUnit != Cm && hgtUnit != In)
-                return false;
-
-            var hgtValue = int.Parse(substring);
-
-            if (hgtUnit == Cm && (hgtValue < 150 || hgtValue > 193))
-                return false;
-
-            if (hgtUnit == In && (hgtValue < 59 || hgtValue > 76))
-                return false;
-
-            if (!Regex.IsMatch(_fieldDict[Hcl], "^#[0-9abcdef]{6}$"))
-                return false;
-
-            if (!_acceptedEyeColors.Contains(_fieldDict[Ecl]))
-                return false;
-
-            if (!Regex.IsMatch(_fieldDict[Pid], "^[0-9]{9}$"))
-                return false;
-
-            return true;
+            return CustomerValidator.Validate(this).IsValid;
         }
     }
 }
