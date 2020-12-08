@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D5BinaryBoarding", "D5BinaryBoarding.csproj", "{9679D82C-248E-4EA1-B73B-4EA2D08E68E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D5BinaryBoardingTests", "..\D5Tests\D5BinaryBoardingTests.csproj", "{7C14483D-EFAA-440C-A535-C48D7DD71A79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D5BinaryBoardingTests", "..\D5BinaryBoardingTests\D5BinaryBoardingTests.csproj", "{7C14483D-EFAA-440C-A535-C48D7DD71A79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
