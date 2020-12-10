@@ -6,14 +6,14 @@ namespace ReportRepair
 {
     public class NaiveSolver
     {
-        private readonly IReadOnlyList<int> _numbers;
+        private readonly IList<long> _numbers;
 
-        public NaiveSolver(IReadOnlyList<int> numbers)
+        public NaiveSolver(IEnumerable<long> numbers)
         {
-            _numbers = numbers;
+            _numbers = numbers.OrderBy(x => x).ToList();
         }
 
-        public (int n1, int n2) Get2NumbersWithSumEqualTo(int toFind)
+        public (long n1, long n2) Get2NumbersWithSumEqualTo(long toFind)
         {
             var sumToFind = toFind;
             for (var index = 0; index < _numbers.Count; index++)
@@ -34,7 +34,7 @@ namespace ReportRepair
             return default;
         }
 
-        public (int n1, int n2, int n3) Get3NumbersWithSumEqualTo(int sumToFind)
+        public (long n1, long n2, long n3) Get3NumbersWithSumEqualTo(long sumToFind)
         {
             for (var i = 0; i < _numbers.Count; i++)
             {

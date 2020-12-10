@@ -24,17 +24,17 @@ namespace ReportRepair
 
             var expandedSolver = new ExpandedSolver(numbers);
 
-            Console.WriteLine(expandedSolver.GetProductOfNNumbersWithSumEqualTo(2, SumToFind));
-            Console.WriteLine(expandedSolver.GetProductOfNNumbersWithSumEqualTo(3, SumToFind));
+            Console.WriteLine(expandedSolver.GetNNumbersWithSumEqualTo(2, SumToFind));
+            Console.WriteLine(expandedSolver.GetNNumbersWithSumEqualTo(3, SumToFind));
 
             Console.ReadKey();
         }
 
 
-        public static IReadOnlyList<int> ReadInput(string inputTxt)
+        public static IReadOnlyList<long> ReadInput(string inputTxt)
         {
             var strings = File.ReadLines(inputTxt);
-            return strings.Select(int.Parse).OrderBy(x => x).ToList();
+            return strings.Select(long.Parse).OrderBy(x => x).ToList();
         }
     }
 }

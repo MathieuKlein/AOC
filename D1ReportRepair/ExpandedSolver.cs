@@ -6,22 +6,21 @@ namespace ReportRepair
 {
     public class ExpandedSolver
     {
-        private readonly IReadOnlyList<int> _numbers;
+        private readonly IEnumerable<long> _numbers;
 
-        public ExpandedSolver(IReadOnlyList<int> numbers)
+        public ExpandedSolver(IEnumerable<long> numbers)
         {
-            _numbers = numbers;
+            _numbers = numbers.OrderBy(x => x);
         }
 
-        public int GetProductOfNNumbersWithSumEqualTo(int n, int sumToFind)
+        public IEnumerable<long> GetNNumbersWithSumEqualTo(long n, long sumToFind)
         {
-            var twoUplet = GenerateNUplets(n).FirstOrDefault(t => t.Sum() == sumToFind) ?? Array.Empty<int>();
-            return twoUplet.Aggregate((x, y) => x * y);
+            return GenerateNUplets(n).FirstOrDefault(t => t.Sum() == sumToFind) ?? Array.Empty<long>();
         }
 
-        public IEnumerable<IEnumerable<int>> GenerateNUplets(int n)
+        public IEnumerable<IEnumerable<long>> GenerateNUplets(long n)
         {
-            var result = (IEnumerable<IEnumerable<int>>) new[] { Enumerable.Empty<int>() };
+            var result = (IEnumerable<IEnumerable<long>>) new[] { Enumerable.Empty<long>() };
             for (var i = 0; i < n; i++)
                 result = result.SelectMany(x => _numbers, (x, item) => x.Concat(new[] { item }));
             return result;

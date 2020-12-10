@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using System.Linq;
+﻿using System.Linq;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -11,20 +10,20 @@ namespace ReportRepair.Tests
         [DataTestMethod]
         [DataRow(2, 1005459)]
         [DataRow(3, 92643264)]
-        public void GetProductOfNNumbersWithSumEqualTo(int n, int result)
+        public void GetNNumbersWithSumEqualTo(int n, int result)
         {
             var numbers = Program.ReadInput(Program.InputTxt);
 
-            var p = new ExpandedSolver(numbers).GetProductOfNNumbersWithSumEqualTo(n, Program.SumToFind);
+            var p = new ExpandedSolver(numbers).GetNNumbersWithSumEqualTo(n, Program.SumToFind);
 
-            p.Should().Be(result);
+            p.Aggregate((x, y) => x * y).Should().Be(result);
         }
 
 
         [TestMethod]
         public void Generate3UpletsTest()
         {
-            var numbers = new[] { 1, 2, 3 };
+            var numbers = new long[] { 1, 2, 3 };
 
             var expected = new[]
             {
@@ -65,7 +64,7 @@ namespace ReportRepair.Tests
         [TestMethod]
         public void Generate2UpletsTest()
         {
-            var numbers = new[] { 1, 2, 3 };
+            var numbers = new long[] { 1, 2, 3 };
 
             var expected = new[]
             {
