@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D11SeatingSystem", "D11SeatingSystem.csproj", "{4595400F-C7A5-4947-8F64-6F221DA18C87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D11SeatingSystemTests", "..\D11Tests\D11SeatingSystemTests.csproj", "{625E440B-17D0-469C-9A9E-A9CFB7583BC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4595400F-C7A5-4947-8F64-6F221DA18C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4595400F-C7A5-4947-8F64-6F221DA18C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4595400F-C7A5-4947-8F64-6F221DA18C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4595400F-C7A5-4947-8F64-6F221DA18C87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{625E440B-17D0-469C-9A9E-A9CFB7583BC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{625E440B-17D0-469C-9A9E-A9CFB7583BC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{625E440B-17D0-469C-9A9E-A9CFB7583BC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{625E440B-17D0-469C-9A9E-A9CFB7583BC8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AEAA8517-FA65-4805-A895-EF44E5199B83}
+	EndGlobalSection
+EndGlobal
