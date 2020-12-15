@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D14DockingData", "D14DockingData.csproj", "{2F79502D-7AFC-446C-98D0-BA0F61BFC084}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D14DockingDataTests", "..\D14DockingDataTests\D14DockingDataTests.csproj", "{C34F9E73-7994-4C7E-8E80-D6E5A27C6182}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F79502D-7AFC-446C-98D0-BA0F61BFC084}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F79502D-7AFC-446C-98D0-BA0F61BFC084}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F79502D-7AFC-446C-98D0-BA0F61BFC084}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F79502D-7AFC-446C-98D0-BA0F61BFC084}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C34F9E73-7994-4C7E-8E80-D6E5A27C6182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C34F9E73-7994-4C7E-8E80-D6E5A27C6182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C34F9E73-7994-4C7E-8E80-D6E5A27C6182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C34F9E73-7994-4C7E-8E80-D6E5A27C6182}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3104447-B802-46D2-9C19-58C5E4782314}
+	EndGlobalSection
+EndGlobal
