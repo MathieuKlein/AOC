@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D15RambunctiousRecitation", "D15RambunctiousRecitation.csproj", "{417D83B9-0D36-45C5-90C3-93A352FFD399}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D15RambunctiousRecitationTests", "..\D15RambunctiousRecitationTests\D15RambunctiousRecitationTests.csproj", "{6A01729D-4864-4752-97E4-BC94612BF88D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{417D83B9-0D36-45C5-90C3-93A352FFD399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{417D83B9-0D36-45C5-90C3-93A352FFD399}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{417D83B9-0D36-45C5-90C3-93A352FFD399}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{417D83B9-0D36-45C5-90C3-93A352FFD399}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A01729D-4864-4752-97E4-BC94612BF88D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A01729D-4864-4752-97E4-BC94612BF88D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A01729D-4864-4752-97E4-BC94612BF88D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A01729D-4864-4752-97E4-BC94612BF88D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {216E0ED2-929D-4FCF-947B-86FD5B7A9E9E}
+	EndGlobalSection
+EndGlobal
