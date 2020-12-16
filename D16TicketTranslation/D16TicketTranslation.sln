@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D16TicketTranslation", "D16TicketTranslation.csproj", "{864F87C7-D1DD-4898-BDF1-E11F5D8AF31C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D16TicketTranslationTests", "..\D16TicketTranslationTests\D16TicketTranslationTests.csproj", "{0E9091DA-3ECE-405A-ACF7-85BFFCDF4FD7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{864F87C7-D1DD-4898-BDF1-E11F5D8AF31C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{864F87C7-D1DD-4898-BDF1-E11F5D8AF31C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{864F87C7-D1DD-4898-BDF1-E11F5D8AF31C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{864F87C7-D1DD-4898-BDF1-E11F5D8AF31C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E9091DA-3ECE-405A-ACF7-85BFFCDF4FD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E9091DA-3ECE-405A-ACF7-85BFFCDF4FD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E9091DA-3ECE-405A-ACF7-85BFFCDF4FD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E9091DA-3ECE-405A-ACF7-85BFFCDF4FD7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30FDFF9D-8093-45A2-85E0-BFD91E796F97}
+	EndGlobalSection
+EndGlobal
