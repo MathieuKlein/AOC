@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D17ConwayCubes", "D17ConwayCubes.csproj", "{CC3E3155-86AC-41C8-9D14-B62B2E5E2DC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D17ConwayCubesTests", "..\D17ConwayCubesTests\D17ConwayCubesTests.csproj", "{EFBB4FED-07E8-45A1-8E6C-283BBBAFB999}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC3E3155-86AC-41C8-9D14-B62B2E5E2DC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC3E3155-86AC-41C8-9D14-B62B2E5E2DC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC3E3155-86AC-41C8-9D14-B62B2E5E2DC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC3E3155-86AC-41C8-9D14-B62B2E5E2DC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFBB4FED-07E8-45A1-8E6C-283BBBAFB999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFBB4FED-07E8-45A1-8E6C-283BBBAFB999}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFBB4FED-07E8-45A1-8E6C-283BBBAFB999}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFBB4FED-07E8-45A1-8E6C-283BBBAFB999}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {013B897A-3444-43EA-AD0C-0599F583C915}
+	EndGlobalSection
+EndGlobal
