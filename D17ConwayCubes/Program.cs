@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using System.Linq;
 
@@ -34,6 +34,29 @@ namespace D17ConwayCubes
                 infiniteHyperCube.ApplyRules();
 
             Console.WriteLine(infiniteHyperCube.GetNumberOfActiveCell());
+
+
+            var infiniteCube3 = new InfiniteHyperCubeN();
+
+            for (var i = 0; i < strings.Count; i++)
+            for (var j = 0; j < strings[i].Length; j++)
+                infiniteCube3.Set(strings[i][j], i, j, 0);
+
+            for (var i = 0; i < 6; i++)
+                infiniteCube3.ApplyRules();
+
+            Console.WriteLine(infiniteCube3.GetNumberOfActiveCell());
+
+            var infiniteCube4 = new InfiniteHyperCubeN();
+
+            for (var i = 0; i < strings.Count; i++)
+            for (var j = 0; j < strings[i].Length; j++)
+                infiniteCube4.Set(strings[i][j], i, j, 0, 0);
+
+            for (var i = 0; i < 6; i++)
+                infiniteCube4.ApplyRules();
+
+            Console.WriteLine(infiniteCube4.GetNumberOfActiveCell());
 
             Console.ReadKey();
         }
