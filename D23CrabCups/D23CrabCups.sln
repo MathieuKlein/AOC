@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D23CrabCups", "D23CrabCups.csproj", "{995DF873-D0B1-4888-A697-F3D0F420AFA2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{995DF873-D0B1-4888-A697-F3D0F420AFA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{995DF873-D0B1-4888-A697-F3D0F420AFA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{995DF873-D0B1-4888-A697-F3D0F420AFA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{995DF873-D0B1-4888-A697-F3D0F420AFA2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F7914F2-639F-4AA6-8FFD-4C3FBABC24E3}
+	EndGlobalSection
+EndGlobal
